@@ -1,0 +1,808 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #050404;
+}
+html body header {
+  background-color: #f4ab53;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body header .navbar {
+  background-color: #624223;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+html body header .navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 25px;
+  transition: 0.4s all;
+  font-family: "Patua One", cursive;
+}
+html body header .navbar a:hover {
+  color: #f4ab53;
+}
+html body main .seccion-historia h2 {
+  color: #cd8e3f;
+  font-family: "Staatliches", cursive;
+  font-size: 32px;
+  text-align: center;
+  margin: 20px;
+}
+html body main .seccion-historia .glide {
+  height: 700px;
+}
+html body main .seccion-historia .glide .glide__track .glide__slides {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+html body main .seccion-historia .glide .glide__track .glide__slides .glide__slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+html body main .seccion-historia .glide .glide__track .glide__slides .glide__slide img {
+  height: 700px;
+  width: 700px;
+}
+html body main .seccion-historia .glide .glide__bullets .glide__bullet {
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+}
+html body main .seccion-historia .text {
+  color: #cd8e3f;
+  font-size: 22px;
+  margin: 25px;
+  font-family: "Patua One", cursive;
+}
+html body main .seccion-historia .temporal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+}
+html body main .seccion-historia .temporal .informacion-left {
+  display: flex;
+  flex-direction: column;
+}
+html body main .seccion-historia .temporal .informacion-left .box {
+  height: 180px;
+  width: 300px;
+  background-color: #f4ab53;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+html body main .seccion-historia .temporal .informacion-left .box img {
+  height: 150px;
+  width: 150px;
+}
+html body main .seccion-historia .temporal .informacion-left .box .texto-info h3 {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Patua One", cursive;
+}
+html body main .seccion-historia .temporal .informacion-left .box .texto-info p {
+  padding: 10px;
+}
+html body main .seccion-historia .temporal .informacion-left .box:nth-child(2n) {
+  background-color: #050404;
+}
+html body main .seccion-historia .temporal .linea {
+  height: 1300px;
+  width: 2px;
+  margin: 30px;
+  color: red;
+  background-color: #f4ab53;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body main .seccion-historia .temporal .linea .puntos {
+  height: 15px;
+  width: 15px;
+  background-color: orange;
+  border-radius: 50%;
+}
+html body main .seccion-historia .temporal .linea .puntos .linea {
+  width: 120px;
+  height: 3px;
+  background-color: orange;
+}
+html body main .seccion-historia .temporal .linea .puntos .left {
+  position: relative;
+  top: -25px;
+  left: -150px;
+  z-index: -1;
+}
+html body main .seccion-historia .temporal .linea .puntos .right {
+  position: relative;
+  top: -24px;
+  left: -20px;
+  z-index: -1;
+}
+html body main .seccion-historia .temporal .linea #punto1 {
+  position: relative;
+  top: 60px;
+}
+html body main .seccion-historia .temporal .linea #punto2 {
+  position: relative;
+  top: 240px;
+}
+html body main .seccion-historia .temporal .linea #punto3 {
+  position: relative;
+  top: 430px;
+}
+html body main .seccion-historia .temporal .linea #punto4 {
+  position: relative;
+  top: 620px;
+}
+html body main .seccion-historia .temporal .linea #punto5 {
+  position: relative;
+  top: 810px;
+}
+html body main .seccion-historia .temporal .linea #punto6 {
+  position: relative;
+  top: 1000px;
+}
+html body main .seccion-historia .temporal .linea #punto7 {
+  position: relative;
+  top: 1190px;
+}
+html body main .seccion-historia .temporal .informacion-right {
+  display: flex;
+  flex-direction: column;
+}
+html body main .seccion-historia .temporal .informacion-right .box {
+  height: 180px;
+  width: 300px;
+  background-color: #f4ab53;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+html body main .seccion-historia .temporal .informacion-right .box img {
+  height: 150px;
+  width: 150px;
+}
+html body main .seccion-historia .temporal .informacion-right .box .texto-info h3 {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Patua One", cursive;
+}
+html body main .seccion-historia .temporal .informacion-right .box .texto-info p {
+  padding: 10px;
+}
+html body main .seccion-historia .temporal .informacion-right .box:nth-child(2n+1) {
+  background-color: #050404;
+}
+html body main .seccion-estilos h2 {
+  color: #cd8e3f;
+  font-family: "Staatliches", cursive;
+  font-size: 32px;
+  text-align: center;
+  margin: 40px;
+}
+html body main .seccion-estilos .cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 80px;
+  grid-row-gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+html body main .seccion-estilos .cards .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: 0.4s all;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+}
+html body main .seccion-estilos .cards .card img {
+  height: 300px;
+  width: 270px;
+}
+html body main .seccion-estilos .cards .card .descripcion {
+  padding: 15px;
+  color: #462505;
+  background-color: #f4ab53;
+  box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+html body main .seccion-estilos .cards .card .descripcion h3 {
+  font-family: "Patua One", cursive;
+  font-size: 25px;
+  text-align: center;
+  margin: 15px;
+}
+html body main .seccion-estilos .cards .card .descripcion p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+html body main .seccion-estilos .cards .card:hover {
+  transform: scale(1.1);
+}
+html body main .seccion-productos h2 {
+  color: #cd8e3f;
+  font-family: "Staatliches", cursive;
+  font-size: 32px;
+  text-align: center;
+  margin: 40px;
+}
+html body main .seccion-productos .productos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10vh auto;
+  width: 90%;
+}
+html body main .seccion-productos .productos .producto {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 330px;
+  transition: 0.4s all;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+}
+html body main .seccion-productos .productos .producto img {
+  height: 450px;
+  width: 330px;
+}
+html body main .seccion-productos .productos .producto .texto-producto {
+  background-color: rgba(244, 171, 83, 0.7);
+  color: #462505;
+  min-height: 450px;
+  position: relative;
+  top: -450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  transition: 0.4s all;
+  box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+html body main .seccion-productos .productos .producto .texto-producto h3 {
+  font-family: "Patua One", cursive;
+  font-size: 29px;
+  text-align: center;
+  margin: 50px auto;
+}
+html body main .seccion-productos .productos .producto .texto-producto p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 19px;
+  padding: 15px;
+}
+html body main .seccion-productos .productos .producto:hover {
+  transform: scale(1.1);
+}
+html body main .seccion-productos .productos .producto:hover .texto-producto {
+  opacity: 0;
+}
+html body main .seccion-locales h2 {
+  color: #f4ab53;
+  font-family: "Staatliches", cursive;
+  font-size: 32px;
+  text-align: center;
+  margin: 40px;
+}
+html body main .seccion-locales .fabrica {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f4ab53;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+html body main .seccion-locales .fabrica img {
+  height: 350px;
+  width: 450px;
+  background-color: blue;
+}
+html body main .seccion-locales .fabrica .texto-fabrica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+html body main .seccion-locales .fabrica .texto-fabrica h3 {
+  color: #462505;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Patua One", cursive;
+}
+html body main .seccion-locales .fabrica .texto-fabrica .informacion p {
+  color: #462505;
+  padding: 10px;
+  font-size: 25px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body main .seccion-locales .fabrica .texto-fabrica .informacion a {
+  padding: 10px;
+  text-decoration: none;
+  color: #462505;
+  font-size: 25px;
+  transition: 0.4s all;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+html body main .seccion-locales .fabrica .texto-fabrica .informacion a:hover {
+  color: #624223;
+  font-size: 27px;
+}
+html body main .seccion-locales .clientes {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  margin: 5vh auto;
+  width: 90%;
+}
+html body main .seccion-locales .clientes .cliente {
+  background-color: #f4ab53;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+}
+html body main .seccion-locales .clientes .cliente img {
+  height: 250px;
+  width: 250px;
+}
+html body main .seccion-locales .clientes .cliente .texto-cliente {
+  margin: 0 auto;
+}
+html body main .seccion-locales .clientes .cliente .texto-cliente h3 {
+  color: #462505;
+  font-size: 28px;
+  text-align: center;
+  font-family: "Patua One", cursive;
+}
+html body main .seccion-locales .clientes .cliente .texto-cliente p {
+  color: #462505;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body main .seccion-locales .clientes .cliente .texto-cliente a {
+  padding: 10px;
+  text-decoration: none;
+  color: #462505;
+  font-size: 20px;
+  transition: 0.4s all;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+html body main .seccion-locales .clientes .cliente .texto-cliente a:hover {
+  color: #624223;
+  font-size: 21px;
+}
+html body .seccion-contactanos {
+  background-color: #462505;
+  color: #cd8e3f;
+  display: flex;
+  flex-direction: column;
+}
+html body .seccion-contactanos .redes-sociales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+html body .seccion-contactanos .redes-sociales .redes h3 {
+  font-size: 30px;
+  font-family: "Patua One", cursive;
+}
+html body .seccion-contactanos .redes-sociales .redes .red {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.5s all;
+  margin: 10px 0px;
+}
+html body .seccion-contactanos .redes-sociales .redes .red .logo-ig i,
+html body .seccion-contactanos .redes-sociales .redes .red .logo-email i,
+html body .seccion-contactanos .redes-sociales .redes .red .logo-tel i,
+html body .seccion-contactanos .redes-sociales .redes .red .logo-wpp i {
+  font-size: 25px;
+  padding: 5px;
+}
+html body .seccion-contactanos .redes-sociales .redes .red p {
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body .seccion-contactanos .redes-sociales .redes .red:hover {
+  color: #f4ab53;
+  cursor: pointer;
+}
+html body .seccion-contactanos .ubicacion {
+  text-align: center;
+  margin: 10px;
+}
+html body .seccion-contactanos .ubicacion h3 {
+  font-size: 30px;
+  font-family: "Patua One", cursive;
+}
+html body .seccion-contactanos .derechos {
+  text-align: center;
+}
+html body .seccion-contactanos .derechos p {
+  font-size: 25px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media (max-width: 1326px) {
+  html body main .seccion-estilos .cards {
+    width: 95%;
+  }
+  html body main .seccion-estilos .cards .card .descripcion h3 {
+    margin: 5px;
+    font-size: 20px;
+  }
+  html body main .seccion-estilos .cards .card .descripcion p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  html body main .seccion-estilos .cards {
+    width: 95%;
+    margin: 0 auto;
+  }
+  html body main .seccion-estilos .cards .card img {
+    height: 270px;
+    width: 230px;
+  }
+  html body main .seccion-estilos .cards .card .descripcion {
+    padding: 8px;
+  }
+  html body main .seccion-estilos .cards .card .descripcion p {
+    font-size: 14px;
+  }
+  html body main .seccion-productos .productos .producto {
+    margin: 15px auto;
+    width: 260px;
+  }
+  html body main .seccion-productos .productos .producto img {
+    width: 260px;
+  }
+  html body main .seccion-locales .fabrica {
+    width: 80%;
+  }
+  html body main .seccion-locales .fabrica .texto-fabrica h3 {
+    font-size: 30px;
+  }
+  html body main .seccion-locales .fabrica .texto-fabrica .informacion p {
+    font-size: 20px;
+  }
+  html body main .seccion-locales .fabrica .texto-fabrica .informacion a {
+    font-size: 20px;
+  }
+  html body main .seccion-locales .clientes {
+    width: 80%;
+    margin: 15px auto;
+    justify-content: center;
+  }
+  html body main .seccion-locales .clientes .cliente {
+    flex-direction: column;
+    width: 300px;
+  }
+  html body main .seccion-locales .clientes .cliente img {
+    height: 100%;
+    width: 100%;
+  }
+  html body main .seccion-locales .clientes .cliente .texto-cliente h3 {
+    font-size: 25px;
+  }
+  html body main .seccion-locales .clientes .cliente .texto-cliente .informacion-cliente p {
+    font-size: 20px;
+  }
+  html body main .seccion-locales .clientes .cliente .texto-cliente .informacion-cliente a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 888px) {
+  html body main .seccion-estilos .cards {
+    margin: 0 auto;
+    width: 80%;
+  }
+  html body main .seccion-estilos .cards .card img {
+    height: 250px;
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  html body header .navbar {
+    flex-direction: column;
+  }
+  html body header .navbar a {
+    width: 100%;
+    text-align: center;
+  }
+  html body main .seccion-estilos .cards {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 0px;
+  }
+  html body main .seccion-productos .productos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html body main .seccion-productos .productos .producto {
+    margin: 2vh auto;
+  }
+  html body main .seccion-locales .fabrica {
+    width: 80%;
+  }
+  html body main .seccion-locales .fabrica img {
+    height: 250px;
+    width: 250px;
+  }
+  html body main .seccion-locales .fabrica .texto-fabrica h3 {
+    font-size: 30px;
+  }
+  html body main .seccion-locales .clientes {
+    grid-template-columns: auto;
+  }
+  html body main .seccion-locales .clientes .cliente {
+    flex-direction: row;
+    width: 100%;
+  }
+  html body main .seccion-locales .clientes .cliente img {
+    height: 250px;
+    width: 250px;
+  }
+}
+@media (max-width: 694px) {
+  html body main .seccion-historia .temporal .informacion-left .box {
+    height: 210px;
+    width: 210px;
+    flex-direction: column;
+  }
+  html body main .seccion-historia .temporal .informacion-left .box img {
+    height: 100px;
+    width: 100px;
+  }
+  html body main .seccion-historia .temporal .informacion-left .box .texto-info p {
+    text-align: center;
+  }
+  html body main .seccion-historia .temporal .linea {
+    height: 1480px;
+    width: 2px;
+  }
+  html body main .seccion-historia .temporal .linea .puntos {
+    height: 15px;
+    width: 15px;
+    background-color: orange;
+    border-radius: 50%;
+  }
+  html body main .seccion-historia .temporal .linea .puntos .linea {
+    width: 120px;
+    height: 3px;
+    background-color: orange;
+  }
+  html body main .seccion-historia .temporal .linea .puntos .left {
+    position: relative;
+    top: -25px;
+    left: -150px;
+    z-index: -1;
+  }
+  html body main .seccion-historia .temporal .linea .puntos .right {
+    position: relative;
+    top: -24px;
+    left: -20px;
+    z-index: -1;
+  }
+  html body main .seccion-historia .temporal .linea #punto1 {
+    position: relative;
+    top: 80px;
+  }
+  html body main .seccion-historia .temporal .linea #punto2 {
+    position: relative;
+    top: 290px;
+  }
+  html body main .seccion-historia .temporal .linea #punto3 {
+    position: relative;
+    top: 510px;
+  }
+  html body main .seccion-historia .temporal .linea #punto4 {
+    position: relative;
+    top: 730px;
+  }
+  html body main .seccion-historia .temporal .linea #punto5 {
+    position: relative;
+    top: 940px;
+  }
+  html body main .seccion-historia .temporal .linea #punto6 {
+    position: relative;
+    top: 1160px;
+  }
+  html body main .seccion-historia .temporal .linea #punto7 {
+    position: relative;
+    top: 1380px;
+  }
+  html body main .seccion-historia .temporal .informacion-right .box {
+    height: 210px;
+    width: 210px;
+    flex-direction: column;
+  }
+  html body main .seccion-historia .temporal .informacion-right .box img {
+    height: 100px;
+    width: 100px;
+  }
+  html body main .seccion-historia .temporal .informacion-right .box .texto-info p {
+    text-align: center;
+  }
+  html body main .seccion-locales .fabrica img {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (max-width: 515px) {
+  html body main .seccion-historia .temporal .informacion-left .box {
+    height: auto;
+    width: 110px;
+  }
+  html body main .seccion-historia .temporal .informacion-left .box img {
+    height: 75px;
+    width: 75px;
+  }
+  html body main .seccion-historia .temporal .informacion-left .empty {
+    height: 200px;
+  }
+  html body main .seccion-historia .temporal .linea {
+    height: 1450px;
+    width: 2px;
+  }
+  html body main .seccion-historia .temporal .linea .puntos {
+    height: 15px;
+    width: 15px;
+    background-color: orange;
+    border-radius: 50%;
+  }
+  html body main .seccion-historia .temporal .linea .puntos .linea {
+    width: 120px;
+    height: 3px;
+    background-color: orange;
+  }
+  html body main .seccion-historia .temporal .linea .puntos .left {
+    position: relative;
+    top: -25px;
+    left: -150px;
+    z-index: -1;
+  }
+  html body main .seccion-historia .temporal .linea .puntos .right {
+    position: relative;
+    top: -24px;
+    left: -20px;
+    z-index: -1;
+  }
+  html body main .seccion-historia .temporal .linea #punto1 {
+    position: relative;
+    top: 50px;
+  }
+  html body main .seccion-historia .temporal .linea #punto2 {
+    position: relative;
+    top: 250px;
+  }
+  html body main .seccion-historia .temporal .linea #punto3 {
+    position: relative;
+    top: 450px;
+  }
+  html body main .seccion-historia .temporal .linea #punto4 {
+    position: relative;
+    top: 650px;
+  }
+  html body main .seccion-historia .temporal .linea #punto5 {
+    position: relative;
+    top: 880px;
+  }
+  html body main .seccion-historia .temporal .linea #punto6 {
+    position: relative;
+    top: 1070px;
+  }
+  html body main .seccion-historia .temporal .linea #punto7 {
+    position: relative;
+    top: 1350px;
+  }
+  html body main .seccion-historia .temporal .informacion-right .box {
+    height: auto;
+    width: 110px;
+  }
+  html body main .seccion-historia .temporal .informacion-right .box img {
+    height: 75px;
+    width: 75px;
+  }
+  html body main .seccion-historia .temporal .informacion-right .empty {
+    height: 170px;
+  }
+  html body main .seccion-estilos .cards {
+    justify-content: center;
+  }
+  html body main .seccion-estilos .cards .card {
+    width: 260px;
+    flex-direction: column;
+    margin: 25px auto;
+  }
+  html body main .seccion-estilos .cards .card img {
+    width: 260px;
+  }
+  html body main .seccion-locales .fabrica {
+    flex-direction: column;
+    width: 340px;
+  }
+  html body main .seccion-locales .fabrica img {
+    height: 340px;
+    width: 340px;
+  }
+  html body main .seccion-locales .clientes .cliente {
+    flex-direction: column;
+    width: 340px;
+  }
+  html body main .seccion-locales .clientes .cliente img {
+    height: 340px;
+    width: 340px;
+  }
+}
+@media (max-width: 425px) {
+  html body main .seccion-historia .temporal {
+    width: 100%;
+  }
+  html body main .seccion-locales .fabrica {
+    flex-direction: column;
+    width: 260px;
+  }
+  html body main .seccion-locales .fabrica img {
+    height: 260px;
+    width: 260px;
+  }
+  html body main .seccion-locales .clientes .cliente {
+    flex-direction: column;
+    width: 260px;
+  }
+  html body main .seccion-locales .clientes .cliente img {
+    height: 260px;
+    width: 260px;
+  }
+  html body .seccion-contactanos .redes-sociales {
+    flex-direction: column;
+    align-items: center;
+  }
+  html body .seccion-contactanos .redes-sociales .redes {
+    margin: 10px auto;
+  }
+  html body .seccion-contactanos .redes-sociales .redes h3 {
+    text-align: center;
+  }
+  html body .seccion-contactanos .redes-sociales .redes .red {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

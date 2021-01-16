@@ -1,0 +1,1131 @@
+@use 'fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    body {
+        background-color: #050404;
+
+        header {
+            background-color: #f4ab53;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .navbar {
+                background-color: #624223;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    padding: 20px;
+                    font-size: 25px;
+                    transition: .4s all;
+                    font-family: 'Patua One', cursive;
+
+                    &:hover {
+                        color: #f4ab53;
+                    }
+                }
+            }
+        }
+
+        main {
+            .seccion-historia {
+                h2 {
+                    color: #cd8e3f;
+                    font-family: 'Staatliches', cursive;
+                    font-size: 32px;
+                    text-align: center;
+                    margin: 20px;
+                }
+
+                .glide {
+                    height: 700px;
+
+
+                    .glide__track {
+                        .glide__slides {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            height: 700px;
+
+
+                            .glide__slide {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+
+                                img {
+                                    height: 700px;
+                                    width: 700px;
+                                }
+
+                            }
+                        }
+                    }
+
+                    .glide__bullets {
+                        .glide__bullet {
+                            height: 20px;
+                            width: 20px;
+                            margin: 10px;
+
+                        }
+
+                    }
+                }
+
+                .text {
+                    color: #cd8e3f;
+                    font-size: 22px;
+                    margin: 25px;
+                    font-family: 'Patua One', cursive;
+                }
+
+                .temporal {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    width: 50%;
+                    margin: 0 auto;
+
+                    .informacion-left {
+                        display: flex;
+                        flex-direction: column;
+
+                        .box {
+                            height: 180px;
+                            width: 300px;
+                            background-color: #f4ab53;
+                            margin: 10px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                height: 150px;
+                                width: 150px;
+                            }
+
+                            .texto-info {
+                                h3 {
+                                    text-align: center;
+                                    font-size: 28px;
+                                    font-family: 'Patua One', cursive;
+                                }
+
+                                p {
+                                    padding: 10px;
+                                }
+                            }
+
+                            &:nth-child(2n) {
+                                background-color: #050404;
+                            }
+                        }
+                    }
+
+                    .linea {
+                        height: 1300px;
+                        width: 2px;
+                        margin: 30px;
+                        color: red;
+                        background-color: #f4ab53;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .puntos {
+                            height: 15px;
+                            width: 15px;
+                            background-color: orange;
+                            border-radius: 50%;
+
+                            .linea {
+                                width: 120px;
+                                height: 3px;
+                                background-color: orange;
+                            }
+
+                            .left {
+                                position: relative;
+                                top: -25px;
+                                left: -150px;
+                                z-index: -1;
+                            }
+
+                            .right {
+                                position: relative;
+                                top: -24px;
+                                left: -20px;
+                                z-index: -1;
+                            }
+                        }
+
+                        #punto1 {
+                            position: relative;
+                            top: 60px;
+                        }
+
+                        #punto2 {
+                            position: relative;
+                            top: 240px;
+                        }
+
+                        #punto3 {
+                            position: relative;
+                            top: 430px;
+                        }
+
+                        #punto4 {
+                            position: relative;
+                            top: 620px;
+                        }
+
+                        #punto5 {
+                            position: relative;
+                            top: 810px;
+                        }
+
+                        #punto6 {
+                            position: relative;
+                            top: 1000px;
+                        }
+
+                        #punto7 {
+                            position: relative;
+                            top: 1190px;
+
+                        }
+                    }
+
+                    .informacion-right {
+                        display: flex;
+                        flex-direction: column;
+
+                        .box {
+                            height: 180px;
+                            width: 300px;
+                            background-color: #f4ab53;
+                            margin: 10px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                height: 150px;
+                                width: 150px;
+                            }
+
+                            .texto-info {
+                                h3 {
+                                    text-align: center;
+                                    font-size: 28px;
+                                    font-family: 'Patua One', cursive;
+                                }
+
+                                p {
+                                    padding: 10px;
+                                }
+                            }
+
+                            &:nth-child(2n+1) {
+                                background-color: #050404;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-estilos {
+                h2 {
+                    color: #cd8e3f;
+                    font-family: 'Staatliches', cursive;
+                    font-size: 32px;
+                    text-align: center;
+                    margin: 40px;
+                }
+
+                .cards {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-column-gap: 80px;
+                    grid-row-gap: 30px;
+                    width: 80%;
+                    margin: 0 auto;
+
+                    .card {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        transition: .4s all;
+                        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+
+                        img {
+                            height: 300px;
+                            width: 270px;
+                        }
+
+                        .descripcion {
+                            padding: 15px;
+                            color: #462505;
+                            background-color: #f4ab53;
+                            box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+                            h3 {
+                                font-family: 'Patua One', cursive;
+                                font-size: 25px;
+                                text-align: center;
+                                margin: 15px;
+                            }
+
+                            p {
+                                font-family: 'Source Sans Pro', sans-serif;
+                                font-size: 16px;
+                            }
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+
+            .seccion-productos {
+                h2 {
+                    color: #cd8e3f;
+                    font-family: 'Staatliches', cursive;
+                    font-size: 32px;
+                    text-align: center;
+                    margin: 40px;
+                }
+
+                .productos {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    margin: 10vh auto;
+                    width: 90%;
+
+                    .producto {
+                        display: flex;
+                        flex-direction: column;
+                        height: 450px;
+                        width: 330px;
+                        transition: .4s all;
+                        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+
+                        img {
+                            height: 450px;
+                            width: 330px;
+
+                        }
+
+                        .texto-producto {
+                            background-color: rgba(244, 171, 83, 0.7);
+                            color: #462505;
+                            min-height: 450px;
+                            position: relative;
+                            top: -450px;
+                            display: flex;
+                            flex-direction: column;
+
+                            align-items: center;
+                            padding: 10px;
+                            transition: .4s all;
+                            box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+
+                            h3 {
+                                font-family: 'Patua One', cursive;
+                                font-size: 29px;
+                                text-align: center;
+                                margin: 50px auto;
+
+                            }
+
+                            p {
+                                font-family: 'Source Sans Pro', sans-serif;
+                                font-size: 19px;
+                                padding: 15px;
+                            }
+                        }
+
+                        &:hover {
+                            transform: scale(1.1);
+
+                            .texto-producto {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-locales {
+                h2 {
+                    color: #f4ab53;
+                    font-family: 'Staatliches', cursive;
+                    font-size: 32px;
+                    text-align: center;
+                    margin: 40px;
+                }
+
+                .fabrica {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    background-color: #f4ab53;
+                    width: 60%;
+                    margin: 0 auto;
+                    box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+
+                    img {
+                        height: 350px;
+                        width: 450px;
+                        background-color: blue;
+                    }
+
+                    .texto-fabrica {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        margin: 0 auto;
+
+                        h3 {
+                            color: #462505;
+                            font-size: 40px;
+                            text-align: center;
+                            font-family: 'Patua One', cursive;
+                        }
+
+                        .informacion {
+                            p {
+                                color: #462505;
+                                padding: 10px;
+                                font-size: 25px;
+                                font-family: 'Source Sans Pro', sans-serif;
+                            }
+
+                            a {
+                                padding: 10px;
+                                text-decoration: none;
+                                color: #462505;
+                                font-size: 25px;
+                                transition: .4s all;
+                                font-family: 'Source Sans Pro', sans-serif;
+                                font-weight: bold;
+
+                                &:hover {
+                                    color: #624223;
+                                    font-size: 27px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .clientes {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-column-gap: 25px;
+                    grid-row-gap: 25px;
+                    margin: 5vh auto;
+                    width: 90%;
+
+                    .cliente {
+                        background-color: #f4ab53;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+
+                        img {
+                            height: 250px;
+                            width: 250px;
+                        }
+
+                        .texto-cliente {
+
+                            margin: 0 auto;
+
+                            h3 {
+                                color: #462505;
+                                font-size: 28px;
+                                text-align: center;
+                                font-family: 'Patua One', cursive;
+                            }
+
+                            p {
+                                color: #462505;
+                                padding: 10px;
+                                font-size: 20px;
+                                font-family: 'Source Sans Pro', sans-serif;
+                            }
+
+                            a {
+                                padding: 10px;
+                                text-decoration: none;
+                                color: #462505;
+                                font-size: 20px;
+                                transition: .4s all;
+                                font-family: 'Source Sans Pro', sans-serif;
+                                font-weight: bold;
+
+                                &:hover {
+                                    color: #624223;
+                                    font-size: 21px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .seccion-contactanos {
+            background-color: #462505;
+            color: #cd8e3f;
+            display: flex;
+            flex-direction: column;
+
+            .redes-sociales {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                .redes {
+                    h3 {
+                        font-size: 30px;
+                        font-family: 'Patua One', cursive;
+                    }
+
+                    .red {
+
+
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        transition: .5s all;
+                        margin: 10px 0px;
+
+                        .logo-ig,
+                        .logo-email,
+                        .logo-tel,
+                        .logo-wpp {
+                            i {
+                                font-size: 25px;
+                                padding: 5px;
+                            }
+                        }
+
+                        p {
+                            font-size: 20px;
+                            font-family: 'Source Sans Pro', sans-serif;
+                        }
+
+                        &:hover {
+                            color: #f4ab53;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .ubicacion {
+                text-align: center;
+                margin: 10px;
+
+                h3 {
+                    font-size: 30px;
+                    font-family: 'Patua One', cursive;
+                }
+            }
+
+            .derechos {
+                text-align: center;
+
+                p {
+                    font-size: 25px;
+                    font-family: 'Source Sans Pro', sans-serif;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1326px) {
+    html {
+        body {
+            main {
+                .seccion-estilos {
+                    .cards {
+                        width: 95%;
+
+                        .card {
+                            .descripcion {
+                                h3 {
+                                    margin: 5px;
+                                    font-size: 20px;
+                                }
+
+                                p {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    html {
+        body {
+            main {
+                .seccion-estilos {
+                    .cards {
+                        width: 95%;
+                        margin: 0 auto;
+
+                        .card {
+                            img {
+                                height: 270px;
+                                width: 230px;
+                            }
+
+                            .descripcion {
+                                padding: 8px;
+
+                                p {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .seccion-productos {
+                    .productos {
+
+                        .producto {
+                            margin: 15px auto;
+                            width: 260px;
+
+                            img {
+                                width: 260px;
+                            }
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        width: 80%;
+
+                        .texto-fabrica {
+                            h3 {
+                                font-size: 30px;
+                            }
+
+                            .informacion {
+                                p {
+                                    font-size: 20px;
+                                }
+
+                                a {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .clientes {
+                        width: 80%;
+                        margin: 15px auto;
+                        justify-content: center;
+
+                        .cliente {
+                            flex-direction: column;
+                            width: 300px;
+
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+
+                            .texto-cliente {
+                                h3 {
+                                    font-size: 25px;
+                                }
+
+                                .informacion-cliente {
+                                    p {
+                                        font-size: 20px;
+                                    }
+
+                                    a {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:888px) {
+    html {
+        body {
+            main {
+                .seccion-estilos {
+                    .cards {
+                        margin: 0 auto;
+                        width: 80%;
+
+                        .card {
+                            img {
+                                height: 250px;
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        body {
+            header {
+                .navbar {
+                    flex-direction: column;
+
+                    a {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+
+            main {
+                .seccion-estilos {
+                    .cards {
+                        display: grid;
+                        grid-template-columns: auto;
+                        grid-row-gap: 20px;
+                        grid-column-gap: 0px;
+                    }
+                }
+
+                .seccion-productos {
+                    .productos {
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .producto {
+                            margin: 2vh auto;
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        width: 80%;
+
+                        img {
+                            height: 250px;
+                            width: 250px;
+                        }
+
+                        .texto-fabrica {
+                            h3 {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+
+                    .clientes {
+
+                        grid-template-columns: auto;
+
+                        .cliente {
+                            flex-direction: row;
+                            width: 100%;
+
+                            img {
+                                height: 250px;
+                                width: 250px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:694px) {
+    html {
+        body {
+            main {
+                .seccion-historia {
+                    .temporal {
+                        .informacion-left {
+                            .box {
+                                height: 210px;
+                                width: 210px;
+                                flex-direction: column;
+
+                                img {
+                                    height: 100px;
+                                    width: 100px;
+                                }
+
+                                .texto-info {
+                                    p {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+
+                        .linea {
+                            height: 1480px;
+                            width: 2px;
+
+                            .puntos {
+                                height: 15px;
+                                width: 15px;
+                                background-color: orange;
+                                border-radius: 50%;
+
+                                .linea {
+                                    width: 120px;
+                                    height: 3px;
+                                    background-color: orange;
+                                }
+
+                                .left {
+                                    position: relative;
+                                    top: -25px;
+                                    left: -150px;
+                                    z-index: -1;
+                                }
+
+                                .right {
+                                    position: relative;
+                                    top: -24px;
+                                    left: -20px;
+                                    z-index: -1;
+                                }
+                            }
+
+                            #punto1 {
+                                position: relative;
+                                top: 80px;
+                            }
+
+                            #punto2 {
+                                position: relative;
+                                top: 290px;
+                            }
+
+                            #punto3 {
+                                position: relative;
+                                top: 510px;
+                            }
+
+                            #punto4 {
+                                position: relative;
+                                top: 730px;
+                            }
+
+                            #punto5 {
+                                position: relative;
+                                top: 940px;
+                            }
+
+                            #punto6 {
+                                position: relative;
+                                top: 1160px;
+                            }
+
+                            #punto7 {
+                                position: relative;
+                                top: 1380px;
+
+                            }
+                        }
+
+                        .informacion-right {
+                            .box {
+                                height: 210px;
+                                width: 210px;
+                                flex-direction: column;
+
+                                img {
+                                    height: 100px;
+                                    width: 100px;
+                                }
+
+                                .texto-info {
+                                    p {
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        img {
+                            height: 200px;
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:515px) {
+    html {
+        body {
+            main {
+                .seccion-historia {
+                    .temporal {
+                        .informacion-left {
+                            .box {
+                                height: auto;
+                                width: 110px;
+
+                                img {
+                                    height: 75px;
+                                    width: 75px;
+                                }
+                            }
+
+                            .empty {
+                                height: 200px;
+                            }
+                        }
+
+                        .linea {
+                            height: 1450px;
+                            width: 2px;
+
+
+                            .puntos {
+                                height: 15px;
+                                width: 15px;
+                                background-color: orange;
+                                border-radius: 50%;
+
+                                .linea {
+                                    width: 120px;
+                                    height: 3px;
+                                    background-color: orange;
+                                }
+
+                                .left {
+                                    position: relative;
+                                    top: -25px;
+                                    left: -150px;
+                                    z-index: -1;
+                                }
+
+                                .right {
+                                    position: relative;
+                                    top: -24px;
+                                    left: -20px;
+                                    z-index: -1;
+                                }
+                            }
+
+                            #punto1 {
+                                position: relative;
+                                top: 50px;
+                            }
+
+                            #punto2 {
+                                position: relative;
+                                top: 250px;
+                            }
+
+                            #punto3 {
+                                position: relative;
+                                top: 450px;
+                            }
+
+                            #punto4 {
+                                position: relative;
+                                top: 650px;
+                            }
+
+                            #punto5 {
+                                position: relative;
+                                top: 880px;
+                            }
+
+                            #punto6 {
+                                position: relative;
+                                top: 1070px;
+                            }
+
+                            #punto7 {
+                                position: relative;
+                                top: 1350px;
+
+                            }
+                        }
+
+                        .informacion-right {
+                            .box {
+                                height: auto;
+                                width: 110px;
+
+                                img {
+                                    height: 75px;
+                                    width: 75px;
+                                }
+                            }
+
+                            .empty {
+                                height: 170px;
+                            }
+                        }
+                    }
+                }
+
+                .seccion-estilos {
+                    .cards {
+                        justify-content: center;
+
+                        .card {
+                            width: 260px;
+                            flex-direction: column;
+                            margin: 25px auto;
+
+                            img {
+                                width: 260px;
+                            }
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        flex-direction: column;
+                        width: 340px;
+
+                        img {
+                            height: 340px;
+                            width: 340px;
+                        }
+                    }
+
+                    .clientes {
+                        .cliente {
+                            flex-direction: column;
+                            width: 340px;
+
+                            img {
+                                height: 340px;
+                                width: 340px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:425px) {
+    html {
+        body {
+
+            main {
+                .seccion-historia {
+                    .temporal {
+                        width: 100%;
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        flex-direction: column;
+                        width: 260px;
+
+                        img {
+                            height: 260px;
+                            width: 260px;
+                        }
+                    }
+
+                    .clientes {
+                        .cliente {
+                            flex-direction: column;
+                            width: 260px;
+
+                            img {
+                                height: 260px;
+                                width: 260px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-contactanos {
+                .redes-sociales {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .redes {
+                        margin: 10px auto;
+
+                        h3 {
+                            text-align: center;
+                        }
+
+                        .red {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
