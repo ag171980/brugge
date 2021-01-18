@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,14 +26,17 @@ html body header {
   background-color: #f4ab53;
   display: flex;
   flex-direction: column;
+  justify-content: initial;
   align-items: center;
 }
 html body header .navbar {
   background-color: #624223;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: initial;
 }
 html body header .navbar a {
   color: white;
@@ -38,14 +50,15 @@ html body header .navbar a:hover {
   color: #f4ab53;
 }
 html body main .seccion-historia h2 {
-  color: #cd8e3f;
+  color: #f4ab53;
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 20px;
+  margin: 30px;
 }
 html body main .seccion-historia .glide {
   height: 700px;
+  width: auto;
 }
 html body main .seccion-historia .glide .glide__track .glide__slides {
   display: flex;
@@ -53,11 +66,13 @@ html body main .seccion-historia .glide .glide__track .glide__slides {
   justify-content: center;
   align-items: center;
   height: 700px;
+  width: auto;
 }
 html body main .seccion-historia .glide .glide__track .glide__slides .glide__slide {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: initial;
 }
 html body main .seccion-historia .glide .glide__track .glide__slides .glide__slide img {
   height: 700px;
@@ -71,19 +86,23 @@ html body main .seccion-historia .glide .glide__bullets .glide__bullet {
 html body main .seccion-historia .text {
   color: #cd8e3f;
   font-size: 22px;
-  margin: 25px;
-  font-family: "Patua One", cursive;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 20px;
 }
 html body main .seccion-historia .temporal {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: initial;
+  height: auto;
   width: 50%;
   margin: 0 auto;
 }
 html body main .seccion-historia .temporal .informacion-left {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
 }
 html body main .seccion-historia .temporal .informacion-left .box {
   height: 180px;
@@ -114,10 +133,10 @@ html body main .seccion-historia .temporal .linea {
   height: 1300px;
   width: 2px;
   margin: 30px;
-  color: red;
   background-color: #f4ab53;
   display: flex;
   flex-direction: column;
+  justify-content: initial;
   align-items: center;
 }
 html body main .seccion-historia .temporal .linea .puntos {
@@ -127,8 +146,8 @@ html body main .seccion-historia .temporal .linea .puntos {
   border-radius: 50%;
 }
 html body main .seccion-historia .temporal .linea .puntos .linea {
-  width: 120px;
   height: 3px;
+  width: 120px;
   background-color: orange;
 }
 html body main .seccion-historia .temporal .linea .puntos .left {
@@ -174,6 +193,8 @@ html body main .seccion-historia .temporal .linea #punto7 {
 html body main .seccion-historia .temporal .informacion-right {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
 }
 html body main .seccion-historia .temporal .informacion-right .box {
   height: 180px;
@@ -201,17 +222,20 @@ html body main .seccion-historia .temporal .informacion-right .box:nth-child(2n+
   background-color: #050404;
 }
 html body main .seccion-estilos h2 {
-  color: #cd8e3f;
+  color: #f4ab53;
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 40px;
+  margin: 30px;
 }
 html body main .seccion-estilos .cards {
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: 80px;
   grid-row-gap: 30px;
+  justify-content: initial;
+  align-items: initial;
+  height: auto;
   width: 80%;
   margin: 0 auto;
 }
@@ -219,6 +243,7 @@ html body main .seccion-estilos .cards .card {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: initial;
   transition: 0.4s all;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 }
@@ -233,35 +258,42 @@ html body main .seccion-estilos .cards .card .descripcion {
   box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 html body main .seccion-estilos .cards .card .descripcion h3 {
-  font-family: "Patua One", cursive;
+  margin: 15px;
+  color: #462505;
   font-size: 25px;
   text-align: center;
-  margin: 15px;
+  font-family: "Patua One", cursive;
 }
 html body main .seccion-estilos .cards .card .descripcion p {
-  font-family: "Source Sans Pro", sans-serif;
+  color: #462505;
   font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
 }
 html body main .seccion-estilos .cards .card:hover {
   transform: scale(1.1);
 }
 html body main .seccion-productos h2 {
-  color: #cd8e3f;
+  color: #f4ab53;
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 40px;
+  margin: 30px;
 }
 html body main .seccion-productos .productos {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: initial;
   margin: 10vh auto;
+  height: auto;
   width: 90%;
 }
 html body main .seccion-productos .productos .producto {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
   height: 450px;
   width: 330px;
   transition: 0.4s all;
@@ -272,28 +304,32 @@ html body main .seccion-productos .productos .producto img {
   width: 330px;
 }
 html body main .seccion-productos .productos .producto .texto-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  color: #462505;
   background-color: rgba(244, 171, 83, 0.7);
   color: #462505;
   min-height: 450px;
   position: relative;
   top: -450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 10px;
   transition: 0.4s all;
   box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
 }
 html body main .seccion-productos .productos .producto .texto-producto h3 {
-  font-family: "Patua One", cursive;
+  color: #462505;
   font-size: 29px;
   text-align: center;
+  font-family: "Patua One", cursive;
   margin: 50px auto;
 }
 html body main .seccion-productos .productos .producto .texto-producto p {
-  font-family: "Source Sans Pro", sans-serif;
+  color: #462505;
   font-size: 19px;
-  padding: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
 }
 html body main .seccion-productos .productos .producto:hover {
   transform: scale(1.1);
@@ -306,27 +342,28 @@ html body main .seccion-locales h2 {
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 40px;
+  margin: 30px;
 }
 html body main .seccion-locales .fabrica {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #f4ab53;
+  align-items: initial;
+  height: auto;
   width: 60%;
+  background-color: #f4ab53;
   margin: 0 auto;
   box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
 }
 html body main .seccion-locales .fabrica img {
   height: 350px;
   width: 450px;
-  background-color: blue;
 }
 html body main .seccion-locales .fabrica .texto-fabrica {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
+  align-items: center;
   margin: 0 auto;
 }
 html body main .seccion-locales .fabrica .texto-fabrica h3 {
@@ -337,9 +374,9 @@ html body main .seccion-locales .fabrica .texto-fabrica h3 {
 }
 html body main .seccion-locales .fabrica .texto-fabrica .informacion p {
   color: #462505;
-  padding: 10px;
   font-size: 25px;
   font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
 }
 html body main .seccion-locales .fabrica .texto-fabrica .informacion a {
   padding: 10px;
@@ -359,7 +396,10 @@ html body main .seccion-locales .clientes {
   grid-template-columns: auto auto;
   grid-column-gap: 25px;
   grid-row-gap: 25px;
+  justify-content: initial;
+  align-items: initial;
   margin: 5vh auto;
+  height: auto;
   width: 90%;
 }
 html body main .seccion-locales .clientes .cliente {
@@ -367,6 +407,7 @@ html body main .seccion-locales .clientes .cliente {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: initial;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 }
 html body main .seccion-locales .clientes .cliente img {
@@ -384,9 +425,9 @@ html body main .seccion-locales .clientes .cliente .texto-cliente h3 {
 }
 html body main .seccion-locales .clientes .cliente .texto-cliente p {
   color: #462505;
-  padding: 10px;
   font-size: 20px;
   font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
 }
 html body main .seccion-locales .clientes .cliente .texto-cliente a {
   padding: 10px;
@@ -406,6 +447,8 @@ html body .seccion-contactanos {
   color: #cd8e3f;
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
 }
 html body .seccion-contactanos .redes-sociales {
   display: flex;
@@ -415,12 +458,15 @@ html body .seccion-contactanos .redes-sociales {
   flex-wrap: wrap;
 }
 html body .seccion-contactanos .redes-sociales .redes h3 {
+  color: #f4ab53;
   font-size: 30px;
+  text-align: center;
   font-family: "Patua One", cursive;
 }
 html body .seccion-contactanos .redes-sociales .redes .red {
   display: flex;
   flex-direction: row;
+  justify-content: initial;
   align-items: center;
   transition: 0.5s all;
   margin: 10px 0px;
@@ -433,8 +479,10 @@ html body .seccion-contactanos .redes-sociales .redes .red .logo-wpp i {
   padding: 5px;
 }
 html body .seccion-contactanos .redes-sociales .redes .red p {
+  color: #cd8e3f;
   font-size: 20px;
   font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
 }
 html body .seccion-contactanos .redes-sociales .redes .red:hover {
   color: #f4ab53;
@@ -445,19 +493,24 @@ html body .seccion-contactanos .ubicacion {
   margin: 10px;
 }
 html body .seccion-contactanos .ubicacion h3 {
+  color: #f4ab53;
   font-size: 30px;
+  text-align: center;
   font-family: "Patua One", cursive;
 }
 html body .seccion-contactanos .derechos {
   text-align: center;
 }
 html body .seccion-contactanos .derechos p {
+  color: #f4ab53;
   font-size: 25px;
   font-family: "Source Sans Pro", sans-serif;
+  padding: 10px;
 }
 
 @media (max-width: 1326px) {
   html body main .seccion-estilos .cards {
+    height: auto;
     width: 95%;
   }
   html body main .seccion-estilos .cards .card .descripcion h3 {
@@ -470,6 +523,7 @@ html body .seccion-contactanos .derechos p {
 }
 @media (max-width: 1024px) {
   html body main .seccion-estilos .cards {
+    height: auto;
     width: 95%;
     margin: 0 auto;
   }
@@ -485,12 +539,15 @@ html body .seccion-contactanos .derechos p {
   }
   html body main .seccion-productos .productos .producto {
     margin: 15px auto;
+    height: 450px;
     width: 260px;
   }
   html body main .seccion-productos .productos .producto img {
+    height: 450px;
     width: 260px;
   }
   html body main .seccion-locales .fabrica {
+    height: auto;
     width: 80%;
   }
   html body main .seccion-locales .fabrica .texto-fabrica h3 {
@@ -503,12 +560,14 @@ html body .seccion-contactanos .derechos p {
     font-size: 20px;
   }
   html body main .seccion-locales .clientes {
+    height: auto;
     width: 80%;
     margin: 15px auto;
     justify-content: center;
   }
   html body main .seccion-locales .clientes .cliente {
     flex-direction: column;
+    height: auto;
     width: 300px;
   }
   html body main .seccion-locales .clientes .cliente img {
@@ -528,6 +587,7 @@ html body .seccion-contactanos .derechos p {
 @media (max-width: 888px) {
   html body main .seccion-estilos .cards {
     margin: 0 auto;
+    height: auto;
     width: 80%;
   }
   html body main .seccion-estilos .cards .card img {
@@ -540,16 +600,20 @@ html body .seccion-contactanos .derechos p {
     flex-direction: column;
   }
   html body header .navbar a {
+    height: auto;
     width: 100%;
     text-align: center;
   }
   html body main .seccion-estilos .cards {
     display: grid;
     grid-template-columns: auto;
-    grid-row-gap: 20px;
-    grid-column-gap: 0px;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    justify-content: initial;
+    align-items: initial;
   }
   html body main .seccion-productos .productos {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -558,6 +622,7 @@ html body .seccion-contactanos .derechos p {
     margin: 2vh auto;
   }
   html body main .seccion-locales .fabrica {
+    height: auto;
     width: 80%;
   }
   html body main .seccion-locales .fabrica img {
@@ -572,6 +637,7 @@ html body .seccion-contactanos .derechos p {
   }
   html body main .seccion-locales .clientes .cliente {
     flex-direction: row;
+    height: auto;
     width: 100%;
   }
   html body main .seccion-locales .clientes .cliente img {
@@ -580,6 +646,18 @@ html body .seccion-contactanos .derechos p {
   }
 }
 @media (max-width: 694px) {
+  html body main .seccion-historia .glide {
+    height: 500px;
+    width: auto;
+  }
+  html body main .seccion-historia .glide .glide__track .glide__slides {
+    height: 500px;
+    width: auto;
+  }
+  html body main .seccion-historia .glide .glide__track .glide__slides .glide__slide img {
+    height: 500px;
+    width: 500px;
+  }
   html body main .seccion-historia .temporal .informacion-left .box {
     height: 210px;
     width: 210px;
@@ -595,29 +673,6 @@ html body .seccion-contactanos .derechos p {
   html body main .seccion-historia .temporal .linea {
     height: 1480px;
     width: 2px;
-  }
-  html body main .seccion-historia .temporal .linea .puntos {
-    height: 15px;
-    width: 15px;
-    background-color: orange;
-    border-radius: 50%;
-  }
-  html body main .seccion-historia .temporal .linea .puntos .linea {
-    width: 120px;
-    height: 3px;
-    background-color: orange;
-  }
-  html body main .seccion-historia .temporal .linea .puntos .left {
-    position: relative;
-    top: -25px;
-    left: -150px;
-    z-index: -1;
-  }
-  html body main .seccion-historia .temporal .linea .puntos .right {
-    position: relative;
-    top: -24px;
-    left: -20px;
-    z-index: -1;
   }
   html body main .seccion-historia .temporal .linea #punto1 {
     position: relative;
@@ -665,6 +720,18 @@ html body .seccion-contactanos .derechos p {
   }
 }
 @media (max-width: 515px) {
+  html body main .seccion-historia .glide {
+    height: 400px;
+    width: auto;
+  }
+  html body main .seccion-historia .glide .glide__track .glide__slides {
+    height: 400px;
+    width: auto;
+  }
+  html body main .seccion-historia .glide .glide__track .glide__slides .glide__slide img {
+    height: 400px;
+    width: 400px;
+  }
   html body main .seccion-historia .temporal .informacion-left .box {
     height: auto;
     width: 110px;
@@ -675,33 +742,11 @@ html body .seccion-contactanos .derechos p {
   }
   html body main .seccion-historia .temporal .informacion-left .empty {
     height: 200px;
+    width: auto;
   }
   html body main .seccion-historia .temporal .linea {
     height: 1450px;
     width: 2px;
-  }
-  html body main .seccion-historia .temporal .linea .puntos {
-    height: 15px;
-    width: 15px;
-    background-color: orange;
-    border-radius: 50%;
-  }
-  html body main .seccion-historia .temporal .linea .puntos .linea {
-    width: 120px;
-    height: 3px;
-    background-color: orange;
-  }
-  html body main .seccion-historia .temporal .linea .puntos .left {
-    position: relative;
-    top: -25px;
-    left: -150px;
-    z-index: -1;
-  }
-  html body main .seccion-historia .temporal .linea .puntos .right {
-    position: relative;
-    top: -24px;
-    left: -20px;
-    z-index: -1;
   }
   html body main .seccion-historia .temporal .linea #punto1 {
     position: relative;
@@ -740,21 +785,25 @@ html body .seccion-contactanos .derechos p {
     width: 75px;
   }
   html body main .seccion-historia .temporal .informacion-right .empty {
-    height: 170px;
+    height: 200px;
+    width: auto;
   }
   html body main .seccion-estilos .cards {
     justify-content: center;
   }
   html body main .seccion-estilos .cards .card {
+    height: auto;
     width: 260px;
     flex-direction: column;
     margin: 25px auto;
   }
   html body main .seccion-estilos .cards .card img {
+    height: auto;
     width: 260px;
   }
   html body main .seccion-locales .fabrica {
     flex-direction: column;
+    height: auto;
     width: 340px;
   }
   html body main .seccion-locales .fabrica img {
@@ -763,6 +812,7 @@ html body .seccion-contactanos .derechos p {
   }
   html body main .seccion-locales .clientes .cliente {
     flex-direction: column;
+    height: auto;
     width: 340px;
   }
   html body main .seccion-locales .clientes .cliente img {
@@ -771,11 +821,25 @@ html body .seccion-contactanos .derechos p {
   }
 }
 @media (max-width: 425px) {
+  html body main .seccion-historia .glide {
+    height: 300px;
+    width: auto;
+  }
+  html body main .seccion-historia .glide .glide__track .glide__slides {
+    height: 300px;
+    width: auto;
+  }
+  html body main .seccion-historia .glide .glide__track .glide__slides .glide__slide img {
+    height: 300px;
+    width: 300px;
+  }
   html body main .seccion-historia .temporal {
+    height: auto;
     width: 100%;
   }
   html body main .seccion-locales .fabrica {
     flex-direction: column;
+    height: auto;
     width: 260px;
   }
   html body main .seccion-locales .fabrica img {
@@ -784,6 +848,7 @@ html body .seccion-contactanos .derechos p {
   }
   html body main .seccion-locales .clientes .cliente {
     flex-direction: column;
+    height: auto;
     width: 260px;
   }
   html body main .seccion-locales .clientes .cliente img {
@@ -791,7 +856,9 @@ html body .seccion-contactanos .derechos p {
     width: 260px;
   }
   html body .seccion-contactanos .redes-sociales {
+    display: flex;
     flex-direction: column;
+    justify-content: initial;
     align-items: center;
   }
   html body .seccion-contactanos .redes-sociales .redes {

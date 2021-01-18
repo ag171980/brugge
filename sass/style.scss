@@ -1,32 +1,28 @@
 @use 'fonts';
+@import 'modules';
+@import 'mediaQueries';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @include ini($cero, $cero, $border);
 }
 
 html {
     scroll-behavior: smooth;
 
     body {
-        background-color: #050404;
+        background-color: $black;
 
         header {
-            background-color: #f4ab53;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: $orange;
+            @include flexbox($column, initial, $center);
 
             .navbar {
-                background-color: #624223;
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
+                background-color: $brown;
+                @include sizes(auto, 100%);
+                @include flexbox($row, $center, initial);
 
                 a {
-                    color: white;
+                    color: $white;
                     text-decoration: none;
                     padding: 20px;
                     font-size: 25px;
@@ -34,7 +30,7 @@ html {
                     font-family: 'Patua One', cursive;
 
                     &:hover {
-                        color: #f4ab53;
+                        color: $orange;
                     }
                 }
             }
@@ -43,34 +39,22 @@ html {
         main {
             .seccion-historia {
                 h2 {
-                    color: #cd8e3f;
-                    font-family: 'Staatliches', cursive;
-                    font-size: 32px;
-                    text-align: center;
-                    margin: 20px;
+                    @include subtitle();
                 }
 
                 .glide {
-                    height: 700px;
-
+                    @include sizes(700px, auto);
 
                     .glide__track {
                         .glide__slides {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            height: 700px;
-
+                            @include flexbox($row, $center, $center);
+                            @include sizes(700px, auto);
 
                             .glide__slide {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: center;
+                                @include flexbox($row, $center, initial);
 
                                 img {
-                                    height: 700px;
-                                    width: 700px;
+                                    @include sizes(700px, 700px);
                                 }
 
                             }
@@ -79,85 +63,40 @@ html {
 
                     .glide__bullets {
                         .glide__bullet {
-                            height: 20px;
-                            width: 20px;
+                            @include sizes(20px, 20px);
                             margin: 10px;
-
                         }
 
                     }
+
                 }
 
                 .text {
-                    color: #cd8e3f;
-                    font-size: 22px;
-                    margin: 25px;
-                    font-family: 'Patua One', cursive;
+                    @include text($orangeLight, 22px, 'margin');
                 }
 
                 .temporal {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    width: 50%;
+                    @include flexbox($row, $spaceAround, initial);
+                    @include sizes(auto, 50%);
                     margin: 0 auto;
 
                     .informacion-left {
-                        display: flex;
-                        flex-direction: column;
-
-                        .box {
-                            height: 180px;
-                            width: 300px;
-                            background-color: #f4ab53;
-                            margin: 10px;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-
-                            img {
-                                height: 150px;
-                                width: 150px;
-                            }
-
-                            .texto-info {
-                                h3 {
-                                    text-align: center;
-                                    font-size: 28px;
-                                    font-family: 'Patua One', cursive;
-                                }
-
-                                p {
-                                    padding: 10px;
-                                }
-                            }
-
-                            &:nth-child(2n) {
-                                background-color: #050404;
-                            }
-                        }
+                        @include information('left');
                     }
 
                     .linea {
-                        height: 1300px;
-                        width: 2px;
+                        @include sizes(1300px, 2px);
                         margin: 30px;
-                        color: red;
-                        background-color: #f4ab53;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
+                        background-color: $orange;
+                        @include flexbox($column, initial, $center);
 
                         .puntos {
-                            height: 15px;
-                            width: 15px;
+                            @include sizes(15px, 15px);
                             background-color: orange;
                             border-radius: 50%;
 
                             .linea {
-                                width: 120px;
-                                height: 3px;
+                                @include sizes(3px, 120px);
                                 background-color: orange;
                             }
 
@@ -214,89 +153,43 @@ html {
                     }
 
                     .informacion-right {
-                        display: flex;
-                        flex-direction: column;
-
-                        .box {
-                            height: 180px;
-                            width: 300px;
-                            background-color: #f4ab53;
-                            margin: 10px;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-
-                            img {
-                                height: 150px;
-                                width: 150px;
-                            }
-
-                            .texto-info {
-                                h3 {
-                                    text-align: center;
-                                    font-size: 28px;
-                                    font-family: 'Patua One', cursive;
-                                }
-
-                                p {
-                                    padding: 10px;
-                                }
-                            }
-
-                            &:nth-child(2n+1) {
-                                background-color: #050404;
-                            }
-                        }
+                        @include information('right');
                     }
                 }
             }
 
             .seccion-estilos {
                 h2 {
-                    color: #cd8e3f;
-                    font-family: 'Staatliches', cursive;
-                    font-size: 32px;
-                    text-align: center;
-                    margin: 40px;
+                    @include subtitle();
                 }
 
                 .cards {
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    grid-column-gap: 80px;
-                    grid-row-gap: 30px;
-                    width: 80%;
+                    @include grid(2, 80px, 30px, initial, initial);
+                    @include sizes(auto, 80%);
                     margin: 0 auto;
 
                     .card {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
+                        @include flexbox($row, $center, initial);
                         transition: .4s all;
                         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 
                         img {
-                            height: 300px;
-                            width: 270px;
+                            @include sizes(300px, 270px);
                         }
 
                         .descripcion {
                             padding: 15px;
-                            color: #462505;
-                            background-color: #f4ab53;
+                            color: $brownDark;
+                            background-color: $orange;
                             box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
 
                             h3 {
-                                font-family: 'Patua One', cursive;
-                                font-size: 25px;
-                                text-align: center;
                                 margin: 15px;
+                                @include h3($brownDark, 25px);
                             }
 
                             p {
-                                font-family: 'Source Sans Pro', sans-serif;
-                                font-size: 16px;
+                                @include text($brownDark, 16px, 'padding');
                             }
                         }
 
@@ -309,60 +202,43 @@ html {
 
             .seccion-productos {
                 h2 {
-                    color: #cd8e3f;
-                    font-family: 'Staatliches', cursive;
-                    font-size: 32px;
-                    text-align: center;
-                    margin: 40px;
+                    @include subtitle();
                 }
 
                 .productos {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
+                    @include flexbox($row, $spaceAround, initial);
                     margin: 10vh auto;
-                    width: 90%;
+                    @include sizes(auto, 90%);
 
                     .producto {
-                        display: flex;
-                        flex-direction: column;
-                        height: 450px;
-                        width: 330px;
+                        @include flexbox($column, initial, initial);
+                        @include sizes(450px, 330px);
                         transition: .4s all;
                         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 
                         img {
-                            height: 450px;
-                            width: 330px;
-
+                            @include sizes(450px, 330px);
                         }
 
                         .texto-producto {
+                            @include flexbox($column, initial, $center);
+                            color: $brownDark;
                             background-color: rgba(244, 171, 83, 0.7);
-                            color: #462505;
+                            color: $brownDark;
                             min-height: 450px;
                             position: relative;
                             top: -450px;
-                            display: flex;
-                            flex-direction: column;
-
-                            align-items: center;
                             padding: 10px;
                             transition: .4s all;
                             box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
 
                             h3 {
-                                font-family: 'Patua One', cursive;
-                                font-size: 29px;
-                                text-align: center;
+                                @include h3($brownDark, 29px);
                                 margin: 50px auto;
-
                             }
 
                             p {
-                                font-family: 'Source Sans Pro', sans-serif;
-                                font-size: 19px;
-                                padding: 15px;
+                                @include text($brownDark, 19px, 'padding');
                             }
                         }
 
@@ -379,62 +255,44 @@ html {
 
             .seccion-locales {
                 h2 {
-                    color: #f4ab53;
-                    font-family: 'Staatliches', cursive;
-                    font-size: 32px;
-                    text-align: center;
-                    margin: 40px;
+                    @include subtitle();
                 }
 
                 .fabrica {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    background-color: #f4ab53;
-                    width: 60%;
+                    @include flexbox($row, $spaceBetween, initial);
+                    @include sizes(auto, 60%);
+                    background-color: $orange;
                     margin: 0 auto;
                     box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
 
                     img {
-                        height: 350px;
-                        width: 450px;
-                        background-color: blue;
+                        @include sizes(350px, 450px);
                     }
 
                     .texto-fabrica {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-around;
-
+                        @include flexbox($column, $spaceAround, $center);
                         margin: 0 auto;
 
                         h3 {
-                            color: #462505;
-                            font-size: 40px;
-                            text-align: center;
-                            font-family: 'Patua One', cursive;
+                            @include h3($brownDark, 40px);
                         }
 
                         .informacion {
                             p {
-                                color: #462505;
-                                padding: 10px;
-                                font-size: 25px;
-                                font-family: 'Source Sans Pro', sans-serif;
+                                @include text($brownDark, 25px, 'padding');
                             }
 
                             a {
                                 padding: 10px;
                                 text-decoration: none;
-                                color: #462505;
+                                color: $brownDark;
                                 font-size: 25px;
                                 transition: .4s all;
                                 font-family: 'Source Sans Pro', sans-serif;
                                 font-weight: bold;
 
                                 &:hover {
-                                    color: #624223;
+                                    color: $brown;
                                     font-size: 27px;
                                 }
                             }
@@ -443,23 +301,17 @@ html {
                 }
 
                 .clientes {
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    grid-column-gap: 25px;
-                    grid-row-gap: 25px;
+                    @include grid(2, 25px, 25px, initial, initial);
                     margin: 5vh auto;
-                    width: 90%;
+                    @include sizes(auto, 90%);
 
                     .cliente {
-                        background-color: #f4ab53;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+                        background-color: $orange;
+                        @include flexbox($row, $spaceBetween, initial);
                         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
 
                         img {
-                            height: 250px;
-                            width: 250px;
+                            @include sizes(250px, 250px);
                         }
 
                         .texto-cliente {
@@ -467,30 +319,24 @@ html {
                             margin: 0 auto;
 
                             h3 {
-                                color: #462505;
-                                font-size: 28px;
-                                text-align: center;
-                                font-family: 'Patua One', cursive;
+                                @include h3($brownDark, 28px);
                             }
 
                             p {
-                                color: #462505;
-                                padding: 10px;
-                                font-size: 20px;
-                                font-family: 'Source Sans Pro', sans-serif;
+                                @include text($brownDark, 20px, 'padding');
                             }
 
                             a {
                                 padding: 10px;
                                 text-decoration: none;
-                                color: #462505;
+                                color: $brownDark;
                                 font-size: 20px;
                                 transition: .4s all;
                                 font-family: 'Source Sans Pro', sans-serif;
                                 font-weight: bold;
 
                                 &:hover {
-                                    color: #624223;
+                                    color: $brown;
                                     font-size: 21px;
                                 }
                             }
@@ -501,30 +347,23 @@ html {
         }
 
         .seccion-contactanos {
-            background-color: #462505;
-            color: #cd8e3f;
-            display: flex;
-            flex-direction: column;
+            background-color: $brownDark;
+            color: $orangeLight;
+            @include flexbox($column, initial, initial);
 
             .redes-sociales {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: flex-start;
+                @include flexbox($row, $spaceAround, $flexStart);
                 flex-wrap: wrap;
 
+
                 .redes {
+
                     h3 {
-                        font-size: 30px;
-                        font-family: 'Patua One', cursive;
+                        @include h3($orange, 30px);
                     }
 
                     .red {
-
-
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
+                        @include flexbox($row, initial, $center);
                         transition: .5s all;
                         margin: 10px 0px;
 
@@ -539,12 +378,11 @@ html {
                         }
 
                         p {
-                            font-size: 20px;
-                            font-family: 'Source Sans Pro', sans-serif;
+                            @include text($orangeLight, 20px, 'padding');
                         }
 
                         &:hover {
-                            color: #f4ab53;
+                            color: $orange;
                             cursor: pointer;
                         }
                     }
@@ -552,580 +390,49 @@ html {
             }
 
             .ubicacion {
-                text-align: center;
+                text-align: $center;
                 margin: 10px;
 
                 h3 {
-                    font-size: 30px;
-                    font-family: 'Patua One', cursive;
+                    @include h3($orange, 30px);
                 }
             }
 
             .derechos {
-                text-align: center;
+                text-align: $center;
 
                 p {
-                    font-size: 25px;
-                    font-family: 'Source Sans Pro', sans-serif;
+                    @include text($orange, 25px, 'padding');
                 }
             }
         }
     }
 }
 
-@media (max-width:1326px) {
-    html {
-        body {
-            main {
-                .seccion-estilos {
-                    .cards {
-                        width: 95%;
-
-                        .card {
-                            .descripcion {
-                                h3 {
-                                    margin: 5px;
-                                    font-size: 20px;
-                                }
-
-                                p {
-                                    font-size: 15px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+@media (max-width:$bp-laptopXL) {
+    @include laptopXL();
 }
 
-@media (max-width:1024px) {
-    html {
-        body {
-            main {
-                .seccion-estilos {
-                    .cards {
-                        width: 95%;
-                        margin: 0 auto;
-
-                        .card {
-                            img {
-                                height: 270px;
-                                width: 230px;
-                            }
-
-                            .descripcion {
-                                padding: 8px;
-
-                                p {
-                                    font-size: 14px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .seccion-productos {
-                    .productos {
-
-                        .producto {
-                            margin: 15px auto;
-                            width: 260px;
-
-                            img {
-                                width: 260px;
-                            }
-                        }
-                    }
-                }
-
-                .seccion-locales {
-                    .fabrica {
-                        width: 80%;
-
-                        .texto-fabrica {
-                            h3 {
-                                font-size: 30px;
-                            }
-
-                            .informacion {
-                                p {
-                                    font-size: 20px;
-                                }
-
-                                a {
-                                    font-size: 20px;
-                                }
-                            }
-                        }
-                    }
-
-                    .clientes {
-                        width: 80%;
-                        margin: 15px auto;
-                        justify-content: center;
-
-                        .cliente {
-                            flex-direction: column;
-                            width: 300px;
-
-                            img {
-                                height: 100%;
-                                width: 100%;
-                            }
-
-                            .texto-cliente {
-                                h3 {
-                                    font-size: 25px;
-                                }
-
-                                .informacion-cliente {
-                                    p {
-                                        font-size: 20px;
-                                    }
-
-                                    a {
-                                        font-size: 20px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+@media (max-width:$bp-laptop) {
+    @include laptop();
 }
 
-@media (max-width:888px) {
-    html {
-        body {
-            main {
-                .seccion-estilos {
-                    .cards {
-                        margin: 0 auto;
-                        width: 80%;
-
-                        .card {
-                            img {
-                                height: 250px;
-                                width: 200px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+@media (max-width:$bp-laptopS) {
+    @include laptopS();
 }
 
-@media (max-width:768px) {
-    html {
-        body {
-            header {
-                .navbar {
-                    flex-direction: column;
-
-                    a {
-                        width: 100%;
-                        text-align: center;
-                    }
-                }
-            }
-
-            main {
-                .seccion-estilos {
-                    .cards {
-                        display: grid;
-                        grid-template-columns: auto;
-                        grid-row-gap: 20px;
-                        grid-column-gap: 0px;
-                    }
-                }
-
-                .seccion-productos {
-                    .productos {
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        .producto {
-                            margin: 2vh auto;
-                        }
-                    }
-                }
-
-                .seccion-locales {
-                    .fabrica {
-                        width: 80%;
-
-                        img {
-                            height: 250px;
-                            width: 250px;
-                        }
-
-                        .texto-fabrica {
-                            h3 {
-                                font-size: 30px;
-                            }
-                        }
-                    }
-
-                    .clientes {
-
-                        grid-template-columns: auto;
-
-                        .cliente {
-                            flex-direction: row;
-                            width: 100%;
-
-                            img {
-                                height: 250px;
-                                width: 250px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+@media (max-width:$bp-tablet) {
+    @include tablet();
 }
 
-@media (max-width:694px) {
-    html {
-        body {
-            main {
-                .seccion-historia {
-                    .temporal {
-                        .informacion-left {
-                            .box {
-                                height: 210px;
-                                width: 210px;
-                                flex-direction: column;
-
-                                img {
-                                    height: 100px;
-                                    width: 100px;
-                                }
-
-                                .texto-info {
-                                    p {
-                                        text-align: center;
-                                    }
-                                }
-                            }
-                        }
-
-                        .linea {
-                            height: 1480px;
-                            width: 2px;
-
-                            .puntos {
-                                height: 15px;
-                                width: 15px;
-                                background-color: orange;
-                                border-radius: 50%;
-
-                                .linea {
-                                    width: 120px;
-                                    height: 3px;
-                                    background-color: orange;
-                                }
-
-                                .left {
-                                    position: relative;
-                                    top: -25px;
-                                    left: -150px;
-                                    z-index: -1;
-                                }
-
-                                .right {
-                                    position: relative;
-                                    top: -24px;
-                                    left: -20px;
-                                    z-index: -1;
-                                }
-                            }
-
-                            #punto1 {
-                                position: relative;
-                                top: 80px;
-                            }
-
-                            #punto2 {
-                                position: relative;
-                                top: 290px;
-                            }
-
-                            #punto3 {
-                                position: relative;
-                                top: 510px;
-                            }
-
-                            #punto4 {
-                                position: relative;
-                                top: 730px;
-                            }
-
-                            #punto5 {
-                                position: relative;
-                                top: 940px;
-                            }
-
-                            #punto6 {
-                                position: relative;
-                                top: 1160px;
-                            }
-
-                            #punto7 {
-                                position: relative;
-                                top: 1380px;
-
-                            }
-                        }
-
-                        .informacion-right {
-                            .box {
-                                height: 210px;
-                                width: 210px;
-                                flex-direction: column;
-
-                                img {
-                                    height: 100px;
-                                    width: 100px;
-                                }
-
-                                .texto-info {
-                                    p {
-                                        text-align: center;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .seccion-locales {
-                    .fabrica {
-                        img {
-                            height: 200px;
-                            width: 200px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+@media (max-width:$bp-tabletS) {
+    @include tabletS();
 }
 
-@media (max-width:515px) {
-    html {
-        body {
-            main {
-                .seccion-historia {
-                    .temporal {
-                        .informacion-left {
-                            .box {
-                                height: auto;
-                                width: 110px;
-
-                                img {
-                                    height: 75px;
-                                    width: 75px;
-                                }
-                            }
-
-                            .empty {
-                                height: 200px;
-                            }
-                        }
-
-                        .linea {
-                            height: 1450px;
-                            width: 2px;
-
-
-                            .puntos {
-                                height: 15px;
-                                width: 15px;
-                                background-color: orange;
-                                border-radius: 50%;
-
-                                .linea {
-                                    width: 120px;
-                                    height: 3px;
-                                    background-color: orange;
-                                }
-
-                                .left {
-                                    position: relative;
-                                    top: -25px;
-                                    left: -150px;
-                                    z-index: -1;
-                                }
-
-                                .right {
-                                    position: relative;
-                                    top: -24px;
-                                    left: -20px;
-                                    z-index: -1;
-                                }
-                            }
-
-                            #punto1 {
-                                position: relative;
-                                top: 50px;
-                            }
-
-                            #punto2 {
-                                position: relative;
-                                top: 250px;
-                            }
-
-                            #punto3 {
-                                position: relative;
-                                top: 450px;
-                            }
-
-                            #punto4 {
-                                position: relative;
-                                top: 650px;
-                            }
-
-                            #punto5 {
-                                position: relative;
-                                top: 880px;
-                            }
-
-                            #punto6 {
-                                position: relative;
-                                top: 1070px;
-                            }
-
-                            #punto7 {
-                                position: relative;
-                                top: 1350px;
-
-                            }
-                        }
-
-                        .informacion-right {
-                            .box {
-                                height: auto;
-                                width: 110px;
-
-                                img {
-                                    height: 75px;
-                                    width: 75px;
-                                }
-                            }
-
-                            .empty {
-                                height: 170px;
-                            }
-                        }
-                    }
-                }
-
-                .seccion-estilos {
-                    .cards {
-                        justify-content: center;
-
-                        .card {
-                            width: 260px;
-                            flex-direction: column;
-                            margin: 25px auto;
-
-                            img {
-                                width: 260px;
-                            }
-                        }
-                    }
-                }
-
-                .seccion-locales {
-                    .fabrica {
-                        flex-direction: column;
-                        width: 340px;
-
-                        img {
-                            height: 340px;
-                            width: 340px;
-                        }
-                    }
-
-                    .clientes {
-                        .cliente {
-                            flex-direction: column;
-                            width: 340px;
-
-                            img {
-                                height: 340px;
-                                width: 340px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+@media (max-width:$bp-mobileXL) {
+    @include mobileXL();
 }
 
-@media (max-width:425px) {
-    html {
-        body {
-
-            main {
-                .seccion-historia {
-                    .temporal {
-                        width: 100%;
-                    }
-                }
-
-                .seccion-locales {
-                    .fabrica {
-                        flex-direction: column;
-                        width: 260px;
-
-                        img {
-                            height: 260px;
-                            width: 260px;
-                        }
-                    }
-
-                    .clientes {
-                        .cliente {
-                            flex-direction: column;
-                            width: 260px;
-
-                            img {
-                                height: 260px;
-                                width: 260px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .seccion-contactanos {
-                .redes-sociales {
-                    flex-direction: column;
-                    align-items: center;
-
-                    .redes {
-                        margin: 10px auto;
-
-                        h3 {
-                            text-align: center;
-                        }
-
-                        .red {
-                            justify-content: center;
-                        }
-                    }
-                }
-            }
-        }
-    }
+@media (max-width:$bp-mobile) {
+    @include mobile();
 }

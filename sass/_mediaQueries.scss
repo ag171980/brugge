@@ -1,0 +1,484 @@
+@use 'fonts';
+@import 'modules';
+
+@mixin laptopXL() {
+    html {
+        body {
+            main {
+                .seccion-estilos {
+                    .cards {
+                        @include sizes(auto, 95%);
+
+                        .card {
+                            .descripcion {
+                                h3 {
+                                    margin: 5px;
+                                    font-size: 20px;
+                                }
+
+                                p {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin laptop() {
+    html {
+        body {
+            main {
+                .seccion-estilos {
+                    .cards {
+                        @include sizes(auto, 95%);
+                        margin: 0 auto;
+
+                        .card {
+                            img {
+                                @include sizes(270px, 230px);
+                            }
+
+                            .descripcion {
+                                padding: 8px;
+
+                                p {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .seccion-productos {
+                    .productos {
+
+                        .producto {
+                            margin: 15px auto;
+                            @include sizes(450px, 260px);
+
+                            img {
+                                @include sizes(450px, 260px);
+                            }
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        @include sizes(auto, 80%);
+
+                        .texto-fabrica {
+                            h3 {
+                                font-size: 30px;
+                            }
+
+                            .informacion {
+                                p {
+                                    font-size: 20px;
+                                }
+
+                                a {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .clientes {
+                        @include sizes(auto, 80%);
+                        margin: 15px auto;
+                        justify-content: $center;
+
+                        .cliente {
+                            flex-direction: $column;
+                            @include sizes(auto, 300px);
+
+                            img {
+
+                                @include sizes(100%, 100%);
+                            }
+
+                            .texto-cliente {
+                                h3 {
+                                    font-size: 25px;
+                                }
+
+                                .informacion-cliente {
+                                    p {
+                                        font-size: 20px;
+                                    }
+
+                                    a {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin laptopS() {
+    html {
+        body {
+            main {
+                .seccion-estilos {
+                    .cards {
+                        margin: 0 auto;
+                        @include sizes(auto, 80%);
+
+                        .card {
+                            img {
+                                @include sizes(250px, 200px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin tablet() {
+    html {
+        body {
+            header {
+                .navbar {
+                    flex-direction: $column;
+
+                    a {
+                        @include sizes(auto, 100%);
+                        text-align: $center;
+                    }
+                }
+            }
+
+            main {
+                .seccion-estilos {
+                    .cards {
+                        @include grid(1, 20px, 0px, initial, initial);
+                    }
+                }
+
+                .seccion-productos {
+                    .productos {
+                        @include flexbox($column, $center, $center);
+
+                        .producto {
+                            margin: 2vh auto;
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        @include sizes(auto, 80%);
+
+                        img {
+                            @include sizes(250px, 250px);
+                        }
+
+                        .texto-fabrica {
+                            h3 {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+
+                    .clientes {
+
+                        grid-template-columns: auto;
+
+                        .cliente {
+                            flex-direction: $row;
+                            @include sizes(auto, 100%);
+
+                            img {
+                                @include sizes(250px, 250px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin tabletS() {
+    html {
+        body {
+            main {
+                .seccion-historia {
+                    @include slider(500px);
+
+                    .temporal {
+                        .informacion-left {
+                            .box {
+                                @include sizes(210px, 210px);
+                                flex-direction: $column;
+
+                                img {
+                                    @include sizes(100px, 100px);
+                                }
+
+                                .texto-info {
+                                    p {
+                                        text-align: $center;
+                                    }
+                                }
+                            }
+                        }
+
+                        .linea {
+                            @include sizes(1480px, 2px);
+
+                            #punto1 {
+                                position: relative;
+                                top: 80px;
+                            }
+
+                            #punto2 {
+                                position: relative;
+                                top: 290px;
+                            }
+
+                            #punto3 {
+                                position: relative;
+                                top: 510px;
+                            }
+
+                            #punto4 {
+                                position: relative;
+                                top: 730px;
+                            }
+
+                            #punto5 {
+                                position: relative;
+                                top: 940px;
+                            }
+
+                            #punto6 {
+                                position: relative;
+                                top: 1160px;
+                            }
+
+                            #punto7 {
+                                position: relative;
+                                top: 1380px;
+
+                            }
+                        }
+
+                        .informacion-right {
+                            .box {
+                                @include sizes(210px, 210px);
+                                flex-direction: $column;
+
+                                img {
+                                    @include sizes(100px, 100px);
+                                }
+
+                                .texto-info {
+                                    p {
+                                        text-align: $center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        img {
+                            @include sizes(200px, 200px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin mobileXL() {
+    html {
+        body {
+            main {
+                .seccion-historia {
+                    @include slider(400px);
+
+                    .temporal {
+                        .informacion-left {
+                            .box {
+                                @include sizes(auto, 110px);
+
+                                img {
+                                    @include sizes(75px, 75px);
+                                }
+                            }
+
+                            .empty {
+                                @include sizes(200px, auto);
+                            }
+                        }
+
+                        .linea {
+                            @include sizes(1450px, 2px);
+
+                            #punto1 {
+                                position: relative;
+                                top: 50px;
+                            }
+
+                            #punto2 {
+                                position: relative;
+                                top: 250px;
+                            }
+
+                            #punto3 {
+                                position: relative;
+                                top: 450px;
+                            }
+
+                            #punto4 {
+                                position: relative;
+                                top: 650px;
+                            }
+
+                            #punto5 {
+                                position: relative;
+                                top: 880px;
+                            }
+
+                            #punto6 {
+                                position: relative;
+                                top: 1070px;
+                            }
+
+                            #punto7 {
+                                position: relative;
+                                top: 1350px;
+
+                            }
+                        }
+
+                        .informacion-right {
+                            .box {
+                                @include sizes(auto, 110px);
+
+                                img {
+                                    @include sizes(75px, 75px);
+                                }
+                            }
+
+                            .empty {
+                                @include sizes(200px, auto);
+                            }
+                        }
+                    }
+                }
+
+                .seccion-estilos {
+                    .cards {
+                        justify-content: $center;
+
+                        .card {
+                            @include sizes(auto, 260px);
+                            flex-direction: $column;
+                            margin: 25px auto;
+
+                            img {
+                                @include sizes(auto, 260px);
+                            }
+                        }
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        flex-direction: $column;
+                        @include sizes(auto, 340px);
+
+                        img {
+                            @include sizes(340px, 340px);
+                        }
+                    }
+
+                    .clientes {
+                        .cliente {
+                            flex-direction: $column;
+                            @include sizes(auto, 340px);
+
+                            img {
+                                @include sizes(340px, 340px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin mobile() {
+    html {
+        body {
+
+            main {
+                .seccion-historia {
+                    @include slider(300px);
+                    .temporal {
+                        @include sizes(auto, 100%);
+                    }
+                }
+
+                .seccion-locales {
+                    .fabrica {
+                        flex-direction: $column;
+                        @include sizes(auto, 260px);
+
+                        img {
+                            @include sizes(260px, 260px);
+                        }
+                    }
+
+                    .clientes {
+                        .cliente {
+                            flex-direction: $column;
+                            @include sizes(auto, 260px);
+
+                            img {
+                                @include sizes(260px, 260px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .seccion-contactanos {
+                .redes-sociales {
+                    @include flexbox($column, initial, $center);
+
+                    .redes {
+                        margin: 10px auto;
+
+                        h3 {
+                            text-align: $center;
+                        }
+
+                        .red {
+                            justify-content: $center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

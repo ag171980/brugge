@@ -1,0 +1,163 @@
+//Imports
+
+@use 'fonts';
+
+//Palette Colors
+
+$white: white;
+$brownDark: #462505;
+$brown: #624223;
+$orange: #f4ab53;
+$orangeLight: #cd8e3f;
+$black: #050404;
+
+//Variables
+
+$cero: 0;
+$border: border-box;
+$row: row;
+$column: column;
+$center: center;
+$spaceAround: space-around;
+$spaceBetween: space-between;
+$flexStart: flex-start;
+$flexEnd: flex-end;
+
+$bp-laptopXL: 1326px;
+$bp-laptop: 1024px;
+$bp-laptopS: 888px;
+$bp-tablet: 768px;
+$bp-tabletS: 694px;
+$bp-mobileXL: 515px;
+$bp-mobile: 425px;
+
+
+//Mixins Modules
+
+@mixin ini($margin, $padding, $borderBox) {
+    margin: $margin;
+    padding: $padding;
+    box-sizing: $borderBox;
+}
+
+@mixin flexbox($flexDirection, $justify, $align) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($number, $gridColumn, $gridRow, $justify, $align) {
+    display: grid;
+
+    @if $number==1 {
+        grid-template-columns: auto;
+    }
+
+    @else if $number==2 {
+        grid-template-columns: auto auto;
+    }
+
+    @else if $number==3 {
+        grid-template-columns: auto auto auto;
+    }
+
+    grid-column-gap: $gridColumn;
+    grid-row-gap: $gridRow;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+
+@mixin subtitle() {
+    color: $orange;
+    font-family: 'Staatliches', cursive;
+    font-size: 32px;
+    text-align: $center;
+    margin: 30px;
+}
+
+@mixin h3($color, $size) {
+    color: $color;
+    font-size: $size;
+    text-align: $center;
+    font-family: 'Patua One', cursive;
+}
+
+@mixin text($color, $size, $space) {
+    color: $color;
+    font-size: $size;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    @if $space=='margin' {
+        margin: 20px;
+    }
+
+    @else if $space=='padding' {
+        padding: 10px;
+    }
+}
+
+@mixin sizes($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin information($dato) {
+    @include flexbox($column, initial, initial);
+
+    .box {
+        @include sizes(180px, 300px);
+        background-color: $orange;
+        margin: 10px;
+        @include flexbox($row, $center, $center);
+
+        img {
+            @include sizes(150px, 150px);
+        }
+
+        .texto-info {
+            h3 {
+                text-align: center;
+                font-size: 28px;
+                font-family: 'Patua One', cursive;
+            }
+
+            p {
+                padding: 10px;
+            }
+        }
+
+        @if $dato=='left' {
+            &:nth-child(2n) {
+                background-color: $black;
+            }
+        }
+
+        @else if $dato=='right' {
+            &:nth-child(2n+1) {
+                background-color: $black;
+            }
+        }
+    }
+}
+
+@mixin slider($size) {
+    .glide {
+        @include sizes($size, auto);
+
+        .glide__track {
+            .glide__slides {
+
+                @include sizes($size, auto);
+
+                .glide__slide {
+                    img {
+                        @include sizes($size, $size);
+                    }
+
+                }
+            }
+        }
+    }
+}
