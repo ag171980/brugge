@@ -7,9 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,14 +19,15 @@ html {
 html body {
   background-color: #050404;
 }
-html body header {
+html body .header {
   background-color: #f4ab53;
+  transition: 0.5s all;
   display: flex;
   flex-direction: column;
   justify-content: initial;
   align-items: center;
 }
-html body header .navbar {
+html body .header .navbar {
   background-color: #624223;
   height: auto;
   width: 100%;
@@ -38,7 +36,7 @@ html body header .navbar {
   justify-content: center;
   align-items: initial;
 }
-html body header .navbar a {
+html body .header .navbar a {
   color: white;
   text-decoration: none;
   padding: 20px;
@@ -46,15 +44,56 @@ html body header .navbar a {
   transition: 0.4s all;
   font-family: "Patua One", cursive;
 }
-html body header .navbar a:hover {
+html body .header .navbar a:hover {
   color: #f4ab53;
+}
+html body .header .menu-button {
+  display: none;
+}
+html body .header .menu-mobile {
+  display: none;
+}
+html body .headerScroll {
+  background-color: #f4ab53;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  transition: 0.5s all;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+}
+html body .headerScroll .navbar {
+  background-color: #624223;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: initial;
+}
+html body .headerScroll .navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 25px;
+  transition: 0.4s all;
+  font-family: "Patua One", cursive;
+}
+html body .headerScroll .navbar a:hover {
+  color: #f4ab53;
+}
+html body .headerScroll .menu-mobile {
+  display: none;
 }
 html body main .seccion-historia h2 {
   color: #f4ab53;
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 30px;
+  margin: 50px 30px;
 }
 html body main .seccion-historia .glide {
   height: 700px;
@@ -226,7 +265,7 @@ html body main .seccion-estilos h2 {
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 30px;
+  margin: 50px 30px;
 }
 html body main .seccion-estilos .cards {
   display: grid;
@@ -278,7 +317,7 @@ html body main .seccion-productos h2 {
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 30px;
+  margin: 50px 30px;
 }
 html body main .seccion-productos .productos {
   display: flex;
@@ -342,7 +381,7 @@ html body main .seccion-locales h2 {
   font-family: "Staatliches", cursive;
   font-size: 32px;
   text-align: center;
-  margin: 30px;
+  margin: 50px 30px;
 }
 html body main .seccion-locales .fabrica {
   display: flex;
@@ -596,19 +635,190 @@ html body .seccion-contactanos .derechos p {
   }
 }
 @media (max-width: 768px) {
-  html body header .navbar {
-    flex-direction: column;
+  html body .header {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  html body header .navbar a {
-    height: auto;
+  html body .header .navbar {
+    display: none;
+  }
+  html body .header .menu-button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin: 0px 30px;
+  }
+  html body .header .menu-button .menu-btn_burger {
+    height: 4px;
+    width: 30px;
+    background: #462505;
+    box-shadow: 0 2px 5px rgba(233, 147, 249, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  html body .header .menu-button .menu-btn_burger:before, html body .header .menu-button .menu-btn_burger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    background: #462505;
+    box-shadow: 0 2px 5px rgba(233, 147, 249, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  html body .header .menu-button .menu-btn_burger::before {
+    transform: translateY(-11px);
+  }
+  html body .header .menu-button .menu-btn_burger::after {
+    transform: translateY(11px);
+  }
+  html body .header .menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #624223;
+    height: 100vh;
+    width: 100vw;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: space-around;
+  }
+  html body .header .menu-mobile .head-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+  }
+  html body .header .menu-mobile .head-menu i {
+    color: #f4ab53;
+    font-size: 30px;
+  }
+  html body .header .menu-mobile nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .header .menu-mobile nav a {
+    color: #f4ab53;
+    text-decoration: none;
+    padding: 40px 20px;
+    font-size: 25px;
+    transition: 0.4s all;
+    font-family: "Patua One", cursive;
     width: 100%;
     text-align: center;
+  }
+  html body .header .menu-mobile nav a:hover {
+    background-color: #f4ab53;
+    color: #624223;
+  }
+  html body .header .mob {
+    display: none;
+  }
+  html body .headerScroll {
+    background-color: rgba(244, 171, 83, 0.9);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  html body .headerScroll .navbar {
+    display: none;
+  }
+  html body .headerScroll .menu-button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin: 0px 30px;
+  }
+  html body .headerScroll .menu-button .menu-btn_burger {
+    height: 4px;
+    width: 30px;
+    background: #462505;
+    box-shadow: 0 2px 5px rgba(233, 147, 249, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  html body .headerScroll .menu-button .menu-btn_burger:before, html body .headerScroll .menu-button .menu-btn_burger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    background: #462505;
+    box-shadow: 0 2px 5px rgba(233, 147, 249, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  html body .headerScroll .menu-button .menu-btn_burger::before {
+    transform: translateY(-11px);
+  }
+  html body .headerScroll .menu-button .menu-btn_burger::after {
+    transform: translateY(11px);
+  }
+  html body .headerScroll .menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #624223;
+    height: 100vh;
+    width: 100vw;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: space-around;
+  }
+  html body .headerScroll .menu-mobile .head-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+  }
+  html body .headerScroll .menu-mobile .head-menu i {
+    color: #f4ab53;
+    font-size: 30px;
+  }
+  html body .headerScroll .menu-mobile nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .headerScroll .menu-mobile nav a {
+    color: #f4ab53;
+    text-decoration: none;
+    padding: 40px 20px;
+    font-size: 25px;
+    transition: 0.4s all;
+    font-family: "Patua One", cursive;
+    width: 100%;
+    text-align: center;
+  }
+  html body .headerScroll .menu-mobile nav a:hover {
+    background-color: #f4ab53;
+    color: #624223;
+  }
+  html body .headerScroll .mob {
+    display: none;
   }
   html body main .seccion-estilos .cards {
     display: grid;
     grid-template-columns: auto;
     grid-column-gap: 20px;
-    grid-row-gap: 0px;
+    grid-row-gap: 20px;
     justify-content: initial;
     align-items: initial;
   }

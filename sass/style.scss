@@ -12,8 +12,9 @@ html {
     body {
         background-color: $black;
 
-        header {
+        .header {
             background-color: $orange;
+            transition: 0.5s all;
             @include flexbox($column, initial, $center);
 
             .navbar {
@@ -33,6 +34,44 @@ html {
                         color: $orange;
                     }
                 }
+            }
+            .menu-button{
+                display: none;
+            }
+            .menu-mobile{
+                display: none;
+            }
+        }
+
+        .headerScroll {
+            background-color: $orange;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+            transition: 0.5s all;
+            @include flexbox($column, initial, $center);
+
+            .navbar {
+                background-color: $brown;
+                @include sizes(auto, 100%);
+                @include flexbox($row, $center, initial);
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    padding: 20px;
+                    font-size: 25px;
+                    transition: .4s all;
+                    font-family: 'Patua One', cursive;
+
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+            }
+            .menu-mobile{
+                display: none;
             }
         }
 
