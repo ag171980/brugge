@@ -3,7 +3,7 @@ new Glide('.glide').mount();
 let animacion = document.querySelectorAll('.animacion');
 let header = document.getElementById('header');
 
-document.getElementById('cuerpo').addEventListener('wheel', function(){
+document.getElementById('cuerpo').addEventListener('click', function(){
     let scrollTop = document.documentElement.scrollTop;
     //console.log(scrollTop);
     if(scrollTop > 200){

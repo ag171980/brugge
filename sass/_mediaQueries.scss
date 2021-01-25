@@ -528,7 +528,6 @@
                             #punto7 {
                                 position: relative;
                                 top: 1350px;
-
                             }
                         }
 
@@ -558,7 +557,7 @@
                             margin: 25px auto;
 
                             img {
-                                @include sizes(auto, 260px);
+                                @include sizes(280px, 260px);
                             }
                         }
                     }
